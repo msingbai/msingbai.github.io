@@ -20,7 +20,7 @@ module.exports = {
       lang: "zh-CN",
       title: penName + title,
       description:
-        "无善无恶心之体，有善有恶意之动，知善知恶是良知，为善去恶是格物。",
+        "标签页标题",
     },
   },
   plugins,

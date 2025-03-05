@@ -12,11 +12,11 @@ module.exports = [
     {
       choosen: "gitalk",
       options: {
-        clientID: "51e233f2dada49dcdac8",
-        clientSecret: "38cc569d9433f9113c256ef3cf0b25ade576f5cc",
-        repo: "xingcxb.github.io", // 仓库
-        owner: "xingcxb", //所有者
-        admin: ["xingcxb"],
+        clientID: "Ov23lieVZLHtBThZ9hcW",
+        clientSecret: "da8550aaf493766b2e94a5d270951c2d7ae20d4a",
+        repo: "msingbai.github.io", // 仓库
+        owner: "msingbai", //所有者
+        admin: ["msingbai"],
         distractionFreeMode: false,
         pagerDirection: "last", // 'first'正序 | 'last'倒序
         id: "<%- (frontmatter.permalink || frontmatter.to.path).slice(-16) %>", //  页面的唯一标识,长度不能超过50
@@ -27,7 +27,7 @@ module.exports = [
     },
   ],
   ["vuepress-plugin-mermaidjs"],
-  ["sitemap", { hostname: "https://xingcxb.com" }],
+  ["sitemap", { hostname: "https://msingbai.github.io/" }],
   // 谷歌统计代码
   [
     "@vuepress/google-analytics",
@@ -103,11 +103,14 @@ module.exports = [
     "dynamic-title",
     {
       showIcon:
-        "https://cdn.jsdelivr.net/gh/xingcxb/blog_img@blog1/blog/basic/favicon.ico",
-      showText: "ヾ(≧▽≦*)o欢迎回来！",
+          "https://cdn.jsdelivr.net/gh/msingbai/blog_img@main/blog/basic/whitecat.png",
+        //"https://cdn.jsdelivr.net/gh/xingcxb/blog_img@blog1/blog/basic/favicon.ico",
+      showText: "",
+      //showText: "ヾ(≧▽≦*)o欢迎回来！",
       hideIcon:
-        "https://cdn.jsdelivr.net/gh/xingcxb/blog_img@blog1/blog/basic/favicon.ico",
-      hideText: "ಥ_ಥ不要走呀！",
+        "https://cdn.jsdelivr.net/gh/msingbai/blog_img@main/blog/basic/whitecat.png",
+      hideText: "迷新白的Blog",
+      //hideText: "ಥ_ಥ不要走呀！",
       recoverTime: 2000, //  持续时间
     },
   ],

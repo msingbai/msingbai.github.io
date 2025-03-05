@@ -1,17 +1,11 @@
-# 不器小窝
+# 迷新白的Blog
 
-又一个个人网站，虽然记录的都比较浅显，但仍不失为自己的一个站点。
+静态博客
 
 ## 说明
 
-麻烦`forks`的兄弟们把统计信息和广告信息清理掉一下，谢谢
+个人站点
 
-## 期望
+## 其他
 
-但愿`GitHub`别倒闭了，让我可以拥有免费的网站服务器，能记录下我的想写想说。
-
-地址：[不器小窝](https://xingcxb.com)
-
-## ⭐`Star 不器小窝`
-
-[![Stargazers over time](https://starchart.cc/xingcxb/xingcxb.github.io.svg)](https://starchart.cc/xingcxb/xingcxb.github.io)
+地址：[迷新白的博客](https://msingbai.github.io/))https://starchart.cc/xingcxb/xingcxb.github.io)

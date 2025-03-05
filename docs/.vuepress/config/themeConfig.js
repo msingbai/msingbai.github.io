@@ -13,8 +13,8 @@ const { penName, link, avatar, name, slogan } = require("../common/info");
 module.exports = {
   nav, // 导航栏
   sidebarDepth: 2, // 侧边栏显示深度，默认1，最大2（显示到h3标题）
-  logo: "https://cdn.jsdelivr.net/gh/xingcxb/blog_img@blog1/blog/basic/logo.png", // 导航栏logo
-  repo: "https://github.com/xingcxb", // 导航栏右侧生成Github链接
+  logo: "https://cdn.jsdelivr.net/gh/msingbai/blog_img@main/blog/basic/whitecat.png", // 导航栏logo
+  repo: "https://github.com/msingbai", // 导航栏右侧生成Github链接
   searchMaxSuggestions: 10, // 搜索结果显示最大数
   lastUpdated: "更新时间", // 开启更新时间，并配置前缀文字   string | boolean (取值为git提交时间)
   docsDir: "docs", // 指定根目录
@@ -29,13 +29,13 @@ module.exports = {
   categoryText: "随笔", // 碎片化文章（_posts文件夹的文章）预设生成的分类值，默认'随笔'
 
   bodyBgImg: [
-    "https://cdn.jsdelivr.net/gh/xingcxb/blog_img@blog1/blog/background/66666.png",
-    "https://cdn.jsdelivr.net/gh/xingcxb/blog_img@blog1/blog/background/60752300_p0.jpg",
-    "https://cdn.jsdelivr.net/gh/xingcxb/blog_img@blog1/blog/background/60866522_p0.jpg",
-    "https://cdn.jsdelivr.net/gh/xingcxb/blog_img@blog1/blog/background/62494753_p0.jpg",
-    "https://cdn.jsdelivr.net/gh/xingcxb/blog_img@blog1/blog/background/62519517_p0.jpg",
-    "https://cdn.jsdelivr.net/gh/xingcxb/blog_img@blog1/blog/background/62691402_p0.jpg",
-    "https://cdn.jsdelivr.net/gh/xingcxb/blog_img@blog1/blog/background/63876132_p0.jpg",
+    "https://cdn.jsdelivr.net/gh/msingbai/blog_img@main/blog/basic/changansanwanli.jpg",
+    // "https://cdn.jsdelivr.net/gh/xingcxb/blog_img@blog1/blog/background/60752300_p0.jpg",
+    // "https://cdn.jsdelivr.net/gh/xingcxb/blog_img@blog1/blog/background/60866522_p0.jpg",
+    // "https://cdn.jsdelivr.net/gh/xingcxb/blog_img@blog1/blog/background/62494753_p0.jpg",
+    // "https://cdn.jsdelivr.net/gh/xingcxb/blog_img@blog1/blog/background/62519517_p0.jpg",
+    // "https://cdn.jsdelivr.net/gh/xingcxb/blog_img@blog1/blog/background/62691402_p0.jpg",
+    // "https://cdn.jsdelivr.net/gh/xingcxb/blog_img@blog1/blog/background/63876132_p0.jpg",
   ], // body背景大图(即整个页面的背景图)，默认无。 单张图片 String || 多张图片 Array, 多张图片时每隔15秒换一张。
   bodyBgImgOpacity: 0.1, // body背景图透明度，选值 0 ~ 1.0, 默认0.5
 
@@ -58,7 +58,7 @@ module.exports = {
 
   // 站点配置（首页 & 文章页）
   blogInfo: {
-    blogCreate: "2022-06-04", // 博客创建时间
+    blogCreate: "2022-07-04", // 博客创建时间
     indexView: true, // 开启首页的访问量和排名统计，默认 true（开启）
     pageView: true, // 开启文章页的浏览量统计，默认 true（开启）
     readingTime: true, // 开启文章页的预计阅读时间，条件：开启 eachFileWords，默认 true（开启）。可在 eachFileWords 的 readEachFileWords 的第二个和第三个参数自定义，默认 1 分钟 300 中文、160 英文
@@ -84,16 +84,20 @@ module.exports = {
       "rgba(0, 0, 0, .3)",
       "rgba(0, 0, 0, .5)",
     ], // 第一个是白天的颜色（默认原图），第二个是黄昏的颜色，第三个是晚上的颜色，第四个是深夜的颜色。bgTimeColor 为 true 生效
-    descFade: true, // 是否开启图片中间描述的淡入淡出效果，默认为 false
+    descFade: false, // 是否开启图片中间描述的淡入淡出效果，默认为 false
     desc: [
-      "有形即有度，有度必满盈。故君子之思不器，君子之行不器，君子之量不器 —— 《论语·为政》",
-      "无善无恶心之体，有善有恶意之动，知善知恶是良知，为善去恶是格物。 -- 王阳明",
-      "积跬步以至千里，致敬每个爱学习的你 —— 来自 Evan Xu",
-      "这一生波澜壮阔或是不惊都没问题 —— 来自 Weibw",
+      // "有形即有度，有度必满盈。故君子之思不器，君子之行不器，君子之量不器 —— 《论语·为政》",
+      // "无善无恶心之体，有善有恶意之动，知善知恶是良知，为善去恶是格物。 -- 王阳明",
+      // "积跬步以至千里，致敬每个爱学习的你 —— 来自 Evan Xu",
+      // "这一生波澜壮阔或是不惊都没问题 —— 来自 Weibw",
+      // "有形即有度，有度必满盈。故君子之思不器，君子之行不器，君子之量不器 —— 《论语·为政》",
+      // "无善无恶心之体，有善有恶意之动，知善知恶是良知，为善去恶是格物。 -- 王阳明",
+      // "积跬步以至千里，致敬每个爱学习的你 —— 来自 Evan Xu",
+      // "这一生波澜壮阔或是不惊都没问题 —— 来自 Weibw",
     ], // 多条描述，如果填写则覆盖 index.md 的 tagline，不填写则默认读取 index.md 的 tagline，descFadeIn 为 true 生效
     descFontSize: "1.4rem", // desc 的字体大小，默认 1.4rem。提示：原主题是 1.1rem
     descFadeInTime: 200, // 描述的淡入效果持续时间，descFade 为 true 生效，默认 200 毫秒
-    descFadeOutTime: 100, // 描述的淡出效果持续时间，descFade 为 true 生效，默认 100 毫秒
+    descFadeOutTime: 10000, // 描述的淡出效果持续时间，descFade 为 true 生效，默认 100 毫秒
     descNextTime: 800, // 当有多个 desc 时，一个 desc 展示完后或准备开始时，多少时间后出现下一个 desc，默认 800 毫秒
     bubble: false, // 是否开启图片的气泡效果，默认为 false
     bubblePosition: 0, // 气泡效果的位置，范围：0-100，不同数值代表不同的起始位置，0是整个图片，50是半张图（一半的下方）。bubble 为 true 生效。默认是 0
@@ -117,17 +121,17 @@ module.exports = {
       {
         iconClass: "icon-youjian",
         title: "发邮件",
-        link: "mailto:xingcxb@qq.com",
+        link: "mailto:895663730@qq.com",
       },
       {
         iconClass: "icon-github",
         title: "GitHub",
-        link: "https://github.com/xingcxb",
+        link: "https://github.com/msingbai",
       },
       {
         iconClass: "icon-erji",
         title: "听音乐",
-        link: "https://music.163.com/#/playlist?id=503418750",
+        link: "https://music.163.com",
       },
     ],
   },

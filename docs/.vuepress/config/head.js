@@ -8,7 +8,7 @@ module.exports = [
     "link",
     {
       rel: "shortcut icon",
-      href: "https://cdn.jsdelivr.net/gh/xingcxb/blog_img@blog1/blog/basic/favicon.ico",
+      href: "https://cdn.jsdelivr.net/gh/msingbai/blog_img@main/blog/basic/whitecat.png",
     },
   ], //favicons，资源放在public文件夹
   [
@@ -31,7 +31,7 @@ module.exports = [
     {
       name: "keywords",
       content:
-        "不器小窝,不器blog,不器博客,flutter开发,随笔,读书笔记,Go,Golang开发,VuePress搭建,记录生活和技术路程",
+        "迷新白的Blog,前端,Vue,社区发现(Community Dection),高等数学。记录生活和技术的成长",
     },
   ],
   [
