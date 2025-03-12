@@ -9,6 +9,7 @@ module.exports = {
         // },
         {
             text: "前端",
+            link: "/frontend/",
             items: [
                 { text: "Vue", link: "/vue/" },
                 { text: "VuePress", link: "/vuepress/" },

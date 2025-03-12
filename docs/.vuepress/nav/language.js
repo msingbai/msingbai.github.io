@@ -4,11 +4,12 @@ module.exports = {
   link: "/language/",
   items: [
     {
-      text: "GoLang",
-      link: "/go/",
+      text: "Java",
+      link: "/java/",
     },
     {
       text: "前端",
+      link: "/frontend/",
       items: [
         { text: "Vue", link: "/vue/" },
         { text: "VuePress", link: "/vuepress/" },
