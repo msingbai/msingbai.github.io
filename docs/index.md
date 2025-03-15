@@ -11,8 +11,8 @@ bannerBg: https://cdn.jsdelivr.net/gh/msingbai/blog_img@main/blog/basic/backgrou
 
 features: # 可选的
   - title: 笔记
-    details: Go、Vue框架等技术笔记
-    link: /language/ # 可选
+    details: Vue框架等技术笔记
+    link: /frontend/ # 可选
     imgUrl: https://cdn.jsdelivr.net/gh/msingbai/blog_img@main/blog/basic/stickers.png
   - title: 文字
     details: 留言讨论
