@@ -1,6 +1,7 @@
 const frontend = require("../nav/frontend");
 const backend = require("../nav/backend");
 const projects = require("../nav/projects");
+const science = require("../nav/science");
 const tools = require("../nav/tools");
 const more = require("../nav/more");
 
