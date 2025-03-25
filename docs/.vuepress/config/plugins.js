@@ -9,16 +9,16 @@ module.exports = [
   ],
   [
     // 配置 Markdown 插件
-    {
-      markdown: {
-        lineNumbers: true,
-        extractHeaders: ["h2", "h3", "h4"],
-        externalLinks: { target: '_blank', rel: 'nofollow noopener noreferrer' },
-        plugins: [
-          'markdown-it-mathjax3', // 添加 markdown-it-mathjax3 插件
-        ]
-      }
+    [
+  "markdown-it-mathjax3", // 添加 markdown-it-mathjax3 插件
+  {
+    markdown: {
+      lineNumbers: true,
+      extractHeaders: ["h2", "h3", "h4"],
+      externalLinks: { target: '_blank', rel: 'nofollow noopener noreferrer' }
     }
+  }
+]
   ],
   [
     "vuepress-plugin-vdoing-comment",

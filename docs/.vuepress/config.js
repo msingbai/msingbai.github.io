@@ -5,6 +5,10 @@ const themeConfig = require("./config/themeConfig.js");
 const { penName, title } = require("./common/info");
 
 module.exports = {
+      extendsMarkdown: md => {
+        md.use(require('markdown-it-mathjax3'))
+        md.linkify.set({ fuzzyEmail: false }) // 可选，用于禁用模糊电子邮件链接
+    },
   // 使用npm包主题 vuepress-theme-vdoing
   theme: "vdoing",
   // 仓库地址
@@ -13,6 +17,8 @@ module.exports = {
   markdown: {
     lineNumbers: true, // 显示代码块的行号
     extractHeaders: ["h2", "h3", "h4"], // 支持 h2、h3、h4 标题
+    plugins:['markdown-it-mathjax3'],
+    externalLinks: { target: '_blank', rel: 'nofollow noopener noreferrer' }
   },
   // 多语言支持
   locales: {
