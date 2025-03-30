@@ -2,6 +2,12 @@
 module.exports = [
   // 自定义插件，即本地插件
   [
+    'vuepress-plugin-html-module',
+    {
+      sidebarB: `
+          <WebInfo />
+        `,
+    },
     {
       name: "custom-plugins",
       globalUIComponents: ["BlockToggle", "GlobalTip", "Aplayer"], // 2.x 版本 globalUIComponents 改名为 clientAppRootComponentFiles

@@ -1,5 +1,4 @@
-import LastReadingPopup from "./components/LastReadingPopup.vue";
-// 使用自定义样式
+import LastReadingPopup from "./components/LastReadingPopup.vue";// 使用自定义样式
 import "./style/palette.styl";
 
 export default ({

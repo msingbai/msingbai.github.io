@@ -63,7 +63,8 @@ module.exports = [
     "script",
     {
       async: "async",
-      src: "https://www.googletagmanager.com/gtag/js?id=G-Q9XQS90GYB",
+      // src: "https://www.googletagmanager.com/gtag/js?id=G-Q9XQS90GYB",
+      src: "",
     },
   ],
   // 谷歌统计 js
@@ -72,7 +73,8 @@ module.exports = [
     "script",
     {
       async: "async",
-      src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1725717718088510",
+      // src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1725717718088510",
+      src: "",
       crossorigin: "anonymous",
     },
   ], // 网站关联Google AdSense 与 html格式广告支持
