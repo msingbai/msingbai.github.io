@@ -14,6 +14,16 @@
     </div>
 
     <div class="webinfo-item">
+      <div class="webinfo-item-title">近一周新增：</div>
+      <div class="webinfo-content">{{ newPostsThisWeek }} 篇</div>
+    </div>
+
+    <div class="webinfo-item">
+      <div class="webinfo-item-title">近一月新增：</div>
+      <div class="webinfo-content">{{ newPostsThisMonth }} 篇</div>
+    </div>
+
+    <div class="webinfo-item">
       <div class="webinfo-item-title">已运行时间：</div>
       <div class="webinfo-content">
         {{ createToNowDay != 0 ? createToNowDay + " 天" : "不到一天" }}
@@ -23,6 +33,13 @@
     <div class="webinfo-item">
       <div class="webinfo-item-title">本站总字数：</div>
       <div class="webinfo-content">{{ totalWords }} 字</div>
+    </div>
+
+    <div class="webinfo-item">
+      <div class="webinfo-item-title">最后活动时间：</div>
+      <div class="webinfo-content">
+        {{ lastActiveTime }}
+      </div>
     </div>
 
     <div class="webinfo-item">
@@ -43,14 +60,24 @@
     </div>
 
     <div v-if="indexView" class="webinfo-item">
-      <div class="webinfo-item-title">您的访问排名：</div>
-      <div class="webinfo-content busuanzi">
+      <div class="webinfo-item-title">本站曾来访过：</div>
+      <div class="webinfo-content">
         <span id="busuanzi_value_site_uv" class="web-site-uv"
-          ><i title="正在获取..." class="loading iconfont icon-loading"></i>
+        ><i title="正在获取..." class="loading iconfont icon-loading"></i>
         </span>
-        名
+        人
       </div>
     </div>
+
+<!--    <div v-if="indexView" class="webinfo-item">-->
+<!--      <div class="webinfo-item-title">您的访问排名：</div>-->
+<!--      <div class="webinfo-content busuanzi">-->
+<!--        <span id="busuanzi_value_site_uv" class="web-site-uv"-->
+<!--          ><i title="正在获取..." class="loading iconfont icon-loading"></i>-->
+<!--        </span>-->
+<!--        名-->
+<!--      </div>-->
+<!--    </div>-->
   </div>
 </template>
 
@@ -63,9 +90,12 @@ export default {
       // Young Kbt
       mdFileCount: 0, // markdown 文档总数
       createToNowDay: 0, // 博客创建时间距今多少天
-      lastActiveDate: "", // 最后活动时间
+      lastActiveDate: "", // 最后活动时间（原始值）
+      lastActiveTime: "", // 最后活动时间（细化显示）//新增变量
       totalWords: 0, // 本站总字数
       indexView: true, // 开启访问量和排名统计
+      newPostsThisWeek: 0, // 近一周新增文章数 //新增变量
+      newPostsThisMonth: 0, // 近一月新增文章数 //新增变量
     };
   },
   computed: {
@@ -98,8 +128,8 @@ export default {
             archivesWords += itemFile.wordsCount;
           } else {
             let wordsCount = itemFile.wordsCount.slice(
-              0,
-              itemFile.wordsCount.length - 1
+                0,
+                itemFile.wordsCount.length - 1
             );
             archivesWords += wordsCount * 1000;
           }
@@ -108,19 +138,22 @@ export default {
       } else if (totalWords == "archives") {
         this.totalWords = 0;
         console.log(
-          "如果 totalWords 使用 archives，必须传入 eachFileWords，显然您并没有传入！"
+            "如果 totalWords 使用 archives，必须传入 eachFileWords，显然您并没有传入！"
         );
       } else {
         this.totalWords = totalWords;
       }
       // 最后一次活动时间
       this.lastActiveDate = timeDiff(this.$lastUpdatePosts[0].lastUpdated);
+      this.lastActiveTime = this.formatLastActiveTime(this.lastActiveDate);
       this.mountedWebInfo(moutedEvent);
       // 获取访问量和排名
       this.indexView = indexView == undefined ? true : indexView;
       if (this.indexView) {
         this.getIndexViewCouter(indexIteration);
       }
+      // 计算近一周和近一月新增文章数
+      this.calculateNewPosts();
     }
   },
   methods: {
@@ -134,8 +167,8 @@ export default {
         if (tagsWrapper && webInfo) {
           if (!this.isSiblilngNode(tagsWrapper, webInfo)) {
             tagsWrapper.parentNode.insertBefore(
-              webInfo,
-              tagsWrapper.nextSibling
+                webInfo,
+                tagsWrapper.nextSibling
             );
             clearInterval(interval);
           }
@@ -163,9 +196,6 @@ export default {
       }
       var i = 0;
       var defaultCouter = "9999";
-      // 如果 require 没有获取成功，则手动获取
-      // 但是容易产生访问量叠加，如果只需要第一次获取数据（可能获取失败），可注释掉，此内容是第一次获取失败后，重新获取访问量，可能导致访问量再次 + 1
-      // 取决于访问人的网络，以及 setTimeout 的时间（需求调节）
       setTimeout(() => {
         let interval = setInterval(() => {
           const indexUv = document.querySelector(".web-site-pv");
@@ -189,6 +219,38 @@ export default {
         }, iterationTime);
       }, iterationTime);
     },
+    /**
+     * 计算近一周和近一月新增文章数
+     */
+    calculateNewPosts() {
+      const oneWeekAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
+      const oneMonthAgo = new Date(Date.now() - 30 * 24 * 60 * 60 * 1000);
+
+      this.newPostsThisWeek = this.$filterPosts.filter(post => {
+        const lastUpdated = new Date(post.lastUpdated);
+        return lastUpdated >= oneWeekAgo;
+      }).length;
+
+      this.newPostsThisMonth = this.$filterPosts.filter(post => {
+        const lastUpdated = new Date(post.lastUpdated);
+        return lastUpdated >= oneMonthAgo;
+      }).length;
+    },
+    /**
+     * 格式化最后活动时间（显示小时/天前）
+     */
+    formatLastActiveTime(dateDiff) {
+      const hours = Math.floor(dateDiff / (1000 * 60 * 60));
+      const days = Math.floor(dateDiff / (1000 * 60 * 60 * 24));
+
+      if (days > 0) {
+        return `${days} 天前`;
+      } else if (hours > 0) {
+        return `${hours} 小时前`;
+      } else {
+        return "刚刚";
+      }
+    }
   },
 };
 </script>
