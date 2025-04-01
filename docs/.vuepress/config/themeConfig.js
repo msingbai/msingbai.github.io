@@ -1,6 +1,8 @@
 const nav = require("./nav.js");
 const footer = require("../common/footer.js");
 const htmlModules = require("./htmlModules.js");
+
+
 const {
   readFileList,
   readTotalFileWords,
@@ -8,6 +10,7 @@ const {
 } = require("../webSiteInfo/readFile.js");
 
 const { penName, link, avatar, name, slogan } = require("../common/info");
+
 
 // 主题配置
 module.exports = {
@@ -29,7 +32,7 @@ module.exports = {
   categoryText: "随笔", // 碎片化文章（_posts文件夹的文章）预设生成的分类值，默认'随笔'
 
   bodyBgImg: [
-    "https://cdn.jsdelivr.net/gh/msingbai/blog_img@main/blog/basic/changansanwanli.jpg",
+    "https://cdn.jsdelivr.net/gh/msingbai/blog_img@main/blog/basic/TheBlindGirl.jpg",
     // "https://cdn.jsdelivr.net/gh/xingcxb/blog_img@blog1/blog/background/60752300_p0.jpg",
     // "https://cdn.jsdelivr.net/gh/xingcxb/blog_img@blog1/blog/background/60866522_p0.jpg",
     // "https://cdn.jsdelivr.net/gh/xingcxb/blog_img@blog1/blog/background/62494753_p0.jpg",
@@ -37,7 +40,7 @@ module.exports = {
     // "https://cdn.jsdelivr.net/gh/xingcxb/blog_img@blog1/blog/background/62691402_p0.jpg",
     // "https://cdn.jsdelivr.net/gh/xingcxb/blog_img@blog1/blog/background/63876132_p0.jpg",
   ], // body背景大图(即整个页面的背景图)，默认无。 单张图片 String || 多张图片 Array, 多张图片时每隔15秒换一张。
-  bodyBgImgOpacity: 0.1, // body背景图透明度，选值 0 ~ 1.0, 默认0.5
+  bodyBgImgOpacity: 0.3, // body背景图透明度，选值 0 ~ 1.0, 默认0.5
 
   // titleBadge: false, // 文章标题前的图标是否显示，默认true
   // titleBadgeIcons: [ // 文章标题前图标的地址，默认主题内置图标
@@ -58,7 +61,7 @@ module.exports = {
 
   // 站点配置（首页 & 文章页）
   blogInfo: {
-    blogCreate: "2022-07-04", // 博客创建时间
+    blogCreate: "2025-03-02", // 博客创建时间
     indexView: true, // 开启首页的访问量和排名统计，默认 true（开启）
     pageView: true, // 开启文章页的浏览量统计，默认 true（开启）
     readingTime: true, // 开启文章页的预计阅读时间，条件：开启 eachFileWords，默认 true（开启）。可在 eachFileWords 的 readEachFileWords 的第二个和第三个参数自定义，默认 1 分钟 300 中文、160 英文
@@ -77,7 +80,7 @@ module.exports = {
     navColor: 1, // 导航栏左侧名字、中间搜索框、右侧字体的颜色，1 是黑色，2 是白色。默认是 1
     switchNavColor: false, // 页面移出大图片的位置后，navColor 是否变换，如由白色变黑色，黑色变白色。默认是 false
     // 因为本主题的默认背景色偏向白色，如果 navColor 是 2，建议需要开启(true)，否则白背景 + 白字体 = 看不见
-    bgTimeColor: true, // 是否开启图片的背景色随一天的不同时间而变化，并且开启时间窗口提示，默认是 false。时间分为四种：白天（原图）、黄昏（偏黄）、晚上（偏黑）、深夜（偏深黑）
+    bgTimeColor: false, // 是否开启图片的背景色随一天的不同时间而变化，并且开启时间窗口提示，默认是 false。时间分为四种：白天（原图）、黄昏（偏黄）、晚上（偏黑）、深夜（偏深黑）
     bgTimeColorArray: [
       "transparent",
       "rgba(255, 148, 48, .2)",
@@ -90,7 +93,7 @@ module.exports = {
       "你没有自己想的那样不好",
       "there is a better way for everything,always",
       "一切自有天意，不要总往坏处想",
-      // "有形即有度，有度必满盈。故君子之思不器，君子之行不器，君子之量不器 —— 《论语·为政》",
+      "天赋的核心是坚持，确切的说，是'无限地找到下一个坚持的理由的能力'",
       // "无善无恶心之体，有善有恶意之动，知善知恶是良知，为善去恶是格物。 -- 王阳明",
       // "积跬步以至千里，致敬每个爱学习的你 —— 来自 Evan Xu",
       // "这一生波澜壮阔或是不惊都没问题 —— 来自 Weibw",
@@ -140,3 +143,4 @@ module.exports = {
   footer,
   htmlModules // 插入hmtl模块
 };
+

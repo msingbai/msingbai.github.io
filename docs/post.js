@@ -37,6 +37,10 @@ async function createPost() {
 
 # ${title}
 
+这是摘要
+
+<!-- more -->   
+
 这是文章的正文内容。
 
 *文字写于：${region}*

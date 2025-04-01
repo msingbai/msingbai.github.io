@@ -507,13 +507,13 @@ function nextAllTipElement(elem) {
 /* 图片大小 */
 .vdoing-index-class .home-wrapper .banner {
   margin-top: 0 !important;
-  height: 100vh;
+  height: 60vh;
   background-attachment: fixed !important;
 }
 
 /* 图片中间的签名和标题位置 */
 .banner-conent {
-  margin-top: 23vh !important;
+  margin-top: 4vh !important;
 }
 
 /* 下面是配合 js 用的 class 样式 */
