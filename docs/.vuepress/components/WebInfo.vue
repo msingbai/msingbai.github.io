@@ -38,14 +38,7 @@
     <div class="webinfo-item">
       <div class="webinfo-item-title">最后活动时间：</div>
       <div class="webinfo-content">
-        {{ lastActiveTime }}
-      </div>
-    </div>
-
-    <div class="webinfo-item">
-      <div class="webinfo-item-title">最后活动时间：</div>
-      <div class="webinfo-content">
-        {{ lastActiveDate == "刚刚" ? "刚刚" : lastActiveDate + "前" }}
+        {{ lastActiveDate }}
       </div>
     </div>
 
@@ -91,7 +84,6 @@ export default {
       mdFileCount: 0, // markdown 文档总数
       createToNowDay: 0, // 博客创建时间距今多少天
       lastActiveDate: "", // 最后活动时间（原始值）
-      lastActiveTime: "", // 最后活动时间（细化显示）//新增变量
       totalWords: 0, // 本站总字数
       indexView: true, // 开启访问量和排名统计
       newPostsThisWeek: 0, // 近一周新增文章数 //新增变量
@@ -145,7 +137,6 @@ export default {
       }
       // 最后一次活动时间
       this.lastActiveDate = timeDiff(this.$lastUpdatePosts[0].lastUpdated);
-      this.lastActiveTime = this.formatLastActiveTime(this.lastActiveDate);
       this.mountedWebInfo(moutedEvent);
       // 获取访问量和排名
       this.indexView = indexView == undefined ? true : indexView;
@@ -236,21 +227,6 @@ export default {
         return lastUpdated >= oneMonthAgo;
       }).length;
     },
-    /**
-     * 格式化最后活动时间（显示小时/天前）
-     */
-    formatLastActiveTime(dateDiff) {
-      const hours = Math.floor(dateDiff / (1000 * 60 * 60));
-      const days = Math.floor(dateDiff / (1000 * 60 * 60 * 24));
-
-      if (days > 0) {
-        return `${days} 天前`;
-      } else if (hours > 0) {
-        return `${hours} 小时前`;
-      } else {
-        return "刚刚";
-      }
-    }
   },
 };
 </script>
