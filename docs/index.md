@@ -15,14 +15,17 @@ features: # 可选的
     details: Vue框架等技术笔记
     link: /frontend/ # 可选
     imgUrl: https://cdn.jsdelivr.net/gh/msingbai/blog_img@main/blog/basic/stickers.png
+    imgStyle: "width: 35% ;height: 35%"
   - title: 文字
     details: 一些记录生活的文字
     link: /speak/
     imgUrl: https://cdn.jsdelivr.net/gh/msingbai/blog_img@main/blog/basic/speak.png
+    imgStyle: "width: 35% ;height: 35%"
   - title: 阅读
     details: 一些阅读轨迹
     link: /read/
-    imgUrl: https://cdn.jsdelivr.net/gh/msingbai/blog_img@main/blog/basic/reading.png
+    imgUrl: https://cdn.jsdelivr.net/gh/msingbai/blog_img@main/blog/basic/read.png
+    imgStyle: "width: 35% ;height: 35%"
 # 文章列表显示方式: detailed 默认，显示详细版文章列表（包括作者、分类、标签、摘要、分页等）| simple => 显示简约版文章列表（仅标题和日期）| none 不显示文章列表
 postList: detailed
 ---
