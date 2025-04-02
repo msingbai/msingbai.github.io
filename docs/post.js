@@ -46,12 +46,7 @@ async function createPost() {
 *文字写于：${region}*
 `;
 
-  const docsPath = 'docs';
-  const filePath = path.join(docsPath, filename);
-
-  if (!fs.existsSync(docsPath)) {
-    fs.mkdirSync(docsPath);
-  }
+  const filePath = path.join(process.cwd(), filename); // 直接生成在当前文件夹
 
   fs.writeFileSync(filePath, content);
   console.log(`文件已成功创建：${filePath}`);
