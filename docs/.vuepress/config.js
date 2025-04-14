@@ -13,7 +13,9 @@ module.exports = {
   theme: "vdoing",
   // 仓库地址
   base: "/",
-  head,
+  head:[
+    ['meta', { name: 'baidu-site-verification', content: 'codeva-98EM3lAppK' }]
+  ],
   markdown: {
     lineNumbers: true, // 显示代码块的行号
     extractHeaders: ["h2", "h3", "h4"], // 支持 h2、h3、h4 标题
