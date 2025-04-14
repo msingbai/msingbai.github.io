@@ -14,7 +14,7 @@ module.exports = {
   // 仓库地址
   base: "/",
   head:[
-    ['meta', { name: 'baidu-site-verification', content: 'codeva-98EM3lAppK' }]
+    ['meta', { name: 'baidu-site-verification', content: 'codeva-nRPVSlBgY1' }]
   ],
   markdown: {
     lineNumbers: true, // 显示代码块的行号
