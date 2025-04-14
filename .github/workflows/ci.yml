@@ -11,10 +11,6 @@ on:
 env: # 设置环境变量
   TZ: Asia/Shanghai # 时区（设置时区可使页面中的`最近更新时间`使用时区时间）
 
-with:
-  target-branch: gh-pages # 部署到 gh-pages 分支
-  fqdn: msingbai.top  # 替换为你的自定义域名
-
 jobs:
   build: # 自定义名称
     runs-on: ubuntu-latest # 运行在虚拟机环境ubuntu-latest
@@ -36,3 +32,16 @@ jobs:
         run: npm install && npm run deploy
 
       # 如只提交到github pages可以使用github-pages-deploy-action，详见: https://github.com/JamesIves/github-pages-deploy-action
+
+
+#未测试
+#      - name: Deploy to GitHub Pages 🚀 # 步骤 4
+#        uses: JamesIves/github-pages-deploy-action@v4
+#        with:
+#          branch: gh-pages # 部署到的分支
+#          folder: dist # 部署的文件夹路径，根据你的项目构建输出调整
+#          clean: true # 清理目标分支中不再存在的文件
+#          clean-exclude: |
+#            .nojekyll
+#            CNAME
+#          token: ${{ secrets.ACCESS_TOKEN }} # 使用 GitHub Token

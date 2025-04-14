@@ -10,7 +10,8 @@ npm run build
 cd docs/.vuepress/dist
 
 # deploy to github pages
-#echo 'mingbai.com' > CNAME
+# 如果需要自定义域名，取消下面的注释并设置你的域名
+echo 'msingbai.top' > CNAME
 
 echo 'google.com, pub-1725717718088510, DIRECT, f08c47fec0942fa0' > ads.txt
 
