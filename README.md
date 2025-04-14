@@ -8,4 +8,4 @@
 
 ## 其他
 
-地址：https://github.com/msingbai/msingbai.github.io
+地址：[迷新白的博客](https://msingbai.top/)
