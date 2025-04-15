@@ -31,8 +31,8 @@ module.exports = [
     {
       choosen: "gitalk",
       options: {
-        clientID: "Ov23lieVZLHtBThZ9hcW",
-        clientSecret: "da8550aaf493766b2e94a5d270951c2d7ae20d4a",
+        clientID: "Ov23li63Uq5VU71AKz8N",
+        clientSecret: "e065cbeb6a880728f95c7bba88a91860d36e7f2e",
         repo: "msingbai.github.io", // 仓库
         owner: "msingbai", //所有者
         admin: ["msingbai"],
