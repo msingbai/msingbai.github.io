@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="left-column">
+        <!-- 左侧固定栏 -->
+        <p>左侧内容</p>
+    </div>
+    <div class="center-column">
+        <!-- 中间自适应内容 -->
+        <p>中间内容</p>
+    </div>
+    <div class="right-column">
+        <!-- 右侧固定栏 -->
+        <p>右侧内容</p>
+    </div>
+</div>
+
+.container {
+    display: flex;
+    justify-content: space-between; /* 分布子元素 */
+}
+
+.left-column, .right-column {
+    width: 200px;  /* 左右栏固定宽度 */
+    background-color: #f4f4f4;
+}
+
+.center-column {
+    flex: 1;  /* 中间内容区域自适应填满剩余空间 */
+    background-color: #e0e0e0;
+}

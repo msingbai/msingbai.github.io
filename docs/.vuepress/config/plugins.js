@@ -41,6 +41,7 @@ module.exports = [
         id: "<%- (frontmatter.permalink || frontmatter.to.path).slice(-16) %>", //  页面的唯一标识,长度不能超过50
         title: "「评论」<%- frontmatter.title %>", // GitHub issue 的标题
         labels: ["Gitalk", "Comment"], // GitHub issue 的标签
+        proxy: "https://strong-caramel-969805.netlify.app/github_access_token",//这是三方的代理地址，登陆后就不会Network Error了。
         body: "页面：<%- window.location.origin + (frontmatter.to.path || window.location.pathname) %>", // GitHub issue 的内容
       },
     },

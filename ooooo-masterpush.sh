@@ -4,3 +4,4 @@ git checkout master
 git add .
 git commit -m "Initial commit with new content"
 git push -u origin master --force
+node utils/baiduPush.js https://msingbai.top
