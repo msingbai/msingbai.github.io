@@ -25,10 +25,10 @@ else
 fi
 
 #注释掉，因为修改了本地的主题，deploy时以本地的为主，不需要ci工作流线上部署
-#git init
-#git add -A
-#git commit -m "${msg}"
-#git push -f $githubUrl master:gh-pages # 推送到github gh-pages分支
+git init
+git add -A
+git commit -m "${msg}"
+git push -f $githubUrl master:gh-pages # 推送到github gh-pages分支
 
 cd -
 rm -rf docs/.vuepress/dist
