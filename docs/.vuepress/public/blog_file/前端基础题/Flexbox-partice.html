@@ -1,29 +1,39 @@
-<div class="container">
-    <div class="left-column">
-        <!-- 左侧固定栏 -->
-        <p>左侧内容</p>
+<!DOCTYPE html>
+ 
+<html lang="zh-CN">
+ 
+<head>
+ 
+    <meta charset="utf-8">
+ 
+    <title>三栏布局with Flexbox</title>
+    <style>
+        body{
+            margin: 0; /* 外边距为0 */
+        }
+        .container {
+            display:flex;/* 设定容器为flexbox */
+        }
+        .left-column{
+            width:100px;/* 左宽度 */
+            background-color: #f0f0f0;/* 增加颜色提高视觉效果 */
+        }
+        .right-column{
+            width:100px;/* 右宽度 */
+            background-color: #f0f0f0;
+        }
+        .center-column{
+            flex-grow: 1; /* 自动填满，自适应 */
+            background-color: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <h1>示例文档</h1>
+    <div class="container">
+        <div class="left-column">Left Column</div>
+        <div class="center-column">Center Column</div>
+        <div class="right-column">Right Column</div>
     </div>
-    <div class="center-column">
-        <!-- 中间自适应内容 -->
-        <p>中间内容</p>
-    </div>
-    <div class="right-column">
-        <!-- 右侧固定栏 -->
-        <p>右侧内容</p>
-    </div>
-</div>
-
-.container {
-    display: flex;
-    justify-content: space-between; /* 分布子元素 */
-}
-
-.left-column, .right-column {
-    width: 200px;  /* 左右栏固定宽度 */
-    background-color: #f4f4f4;
-}
-
-.center-column {
-    flex: 1;  /* 中间内容区域自适应填满剩余空间 */
-    background-color: #e0e0e0;
-}
+</body>
+</html>
