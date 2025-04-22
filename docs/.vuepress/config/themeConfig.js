@@ -94,8 +94,8 @@ module.exports = {
       "there is a better way for everything,always",
       "一切自有天意，不要总往坏处想",
       "天赋的核心是坚持，确切的说，是'无限地找到下一个坚持的理由的能力'",
-      // "无善无恶心之体，有善有恶意之动，知善知恶是良知，为善去恶是格物。 -- 王阳明",
-      // "积跬步以至千里，致敬每个爱学习的你 —— 来自 Evan Xu",
+      "无论考第几名、无论学得是快是慢,学会一样就有多一分的快乐",
+      "即使对手是天下第一的剑客，也敢于亮剑",
       // "这一生波澜壮阔或是不惊都没问题 —— 来自 Weibw",
     ], // 多条描述，如果填写则覆盖 index.md 的 tagline，不填写则默认读取 index.md 的 tagline，descFadeIn 为 true 生效
     descFontSize: "1.4rem", // desc 的字体大小，默认 1.4rem。提示：原主题是 1.1rem
