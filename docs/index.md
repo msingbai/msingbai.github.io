@@ -16,10 +16,10 @@ features: # 可选的
     link: /frontend/ # 可选
     imgUrl: https://cdn.jsdelivr.net/gh/msingbai/blog_img@main/blog/basic/stickers.png
     imgStyle: "width: 35% ;height: 35%"
-  - title: 文字
-    details: 一些记录生活的文字
-    link: /speak/
-    imgUrl: https://cdn.jsdelivr.net/gh/msingbai/blog_img@main/blog/basic/speak.png
+  - title: 项目
+    details: 一些前端和后端的项目记录
+    link: /projects/
+    imgUrl: https://cdn.jsdelivr.net/gh/msingbai/blog_img@main/blog/basic/app.png
     imgStyle: "width: 35% ;height: 35%"
   - title: 阅读
     details: 一些阅读轨迹
