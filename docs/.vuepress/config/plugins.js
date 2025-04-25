@@ -123,12 +123,12 @@ module.exports = [
     "dynamic-title",
     {
       showIcon:
-          "https://cdn.jsdelivr.net/gh/msingbai/blog_img@main/blog/basic/whitecat.png",
+          "https://cdn.jsdelivr.net/gh/msingbai/blog_img@main/blog/basic/candle-withback.png",
         //"https://cdn.jsdelivr.net/gh/xingcxb/blog_img@blog1/blog/basic/favicon.ico",
       showText: "",
       //showText: "ヾ(≧▽≦*)o欢迎回来！",
       hideIcon:
-        "https://cdn.jsdelivr.net/gh/msingbai/blog_img@main/blog/basic/whitecat.png",
+        "https://cdn.jsdelivr.net/gh/msingbai/blog_img@main/blog/basic/candle-withback.png",
       hideText: "迷新白的Blog",
       //hideText: "ಥ_ಥ不要走呀！",
       recoverTime: 2000, //  持续时间

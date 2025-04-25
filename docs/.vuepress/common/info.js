@@ -9,7 +9,7 @@ const link = "https://msingbai.github.io/";
 const footerTitle = "的博客";
 // 头像图片
 const avatar =
-    "https://cdn.jsdelivr.net/gh/msingbai/blog_img@main/blog/basic/homehead.jpg";
+    "https://avatars.githubusercontent.com/u/18241922?v=4";
 //https://cdn.jsdelivr.net/gh/用户名/仓库名@版本号/文件路径
 //"https://cdn.jsdelivr.net/gh/xingcxb/blog_img@blog1/blog/basic/Avatar.png";
 // 头像下的昵称

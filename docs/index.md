@@ -14,7 +14,7 @@ features: # 可选的
   - title: 笔记
     details: Vue框架等技术笔记
     link: /frontend/ # 可选
-    imgUrl: https://cdn.jsdelivr.net/gh/msingbai/blog_img@main/blog/basic/stickers.png
+    imgUrl: https://cdn.jsdelivr.net/gh/msingbai/blog_img@main/blog/basic/record.png
     imgStyle: "width: 35% ;height: 35%"
   - title: 项目
     details: 一些前端和后端的项目记录
