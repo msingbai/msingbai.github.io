@@ -1,0 +1,8 @@
+<p id="content"> 请等三秒钟!</p>  
+<script>  
+setTimeout("changeState()",3000 );  
+function changeState(){  
+    let content=document.getElementById('content');  
+    content.innerHTML="<div style='color:red'>我是三秒后显示的内容！</div>";  
+}  
+</script>

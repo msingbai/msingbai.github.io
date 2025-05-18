@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Most Frequent Words</title>
+</head>
+<body>
+    <h1>Find Most Frequent Words</h1>
+    <p>Input: "Hello world, hello moon. Hello sun!"</p>
+    <div id="result"></div> <!-- 用于显示结果的元素 -->
+
+    <script>
+        const findMostWord1 = s => {
+            if (!s) return;
+
+            const article = s.trim().toLowerCase();
+            const list = article.match(/[a-zA-Z]+/g);
+            const map = {};
+            const result = { maxCount: 0, words: [] };
+
+            list.forEach(word => {
+                let count = 1;
+                if (Object.hasOwn(map, word)) {
+                    count += map[word];
+                }
+                map[word] = count;
+
+                if (count > result.maxCount) {
+                    result.maxCount = count;
+                    result.words = [word];
+                } else if (count === result.maxCount) {
+                    result.words.push(word);
+                }
+            });
+
+            return result;
+        };
+
+        // 测试代码
+        const input = "Hello world, hello moon. Hello sun!";
+        const result = findMostWord1(input);
+
+        // 将结果显示在页面上
+        const resultElement = document.getElementById('result');
+        if (result) {
+            resultElement.innerHTML = `
+                <p>Max Count: ${result.maxCount}</p>
+                <p>Words: ${result.words.join(', ')}</p>
+            `;
+        } else {
+            resultElement.innerHTML = '<p>No result found.</p>';
+        }
+    </script>
+</body>
+</html>
